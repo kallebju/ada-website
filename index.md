@@ -6,8 +6,12 @@ In this project we investigate similarity among American politicians in differen
 ## QuoteBank
 Before we begin, let's gain some more insight into the data we use for the project.
 In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr of times.
+**Let's see the distribution of gender and party among the politicians in the dataset**
 
+### Gender distribution in QuoteBank in 2019
 {% include piechart.html %}
+### Party distribution in QuoteBank in 2019
+{% include piechart_party_2019.html %}
 
 ## Time correlation
 
