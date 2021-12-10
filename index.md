@@ -20,8 +20,12 @@ In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr 
 
 
 ## Quote similarity
+In this part we cluster the concatenated quotes of single politicians in the 2019 partition of QuoteBank. The bag-of-words representation was reduced in dimensionality using NMF, to 50 dimensions.
+The following figure shows the most heavily weighted words in the most important dimension for centroids in respective cluster.
 
+<h3 style="text-align: center;">Heavily weighted words in clusters</h3>
 
+![Top words in clusters](/assets/cluster_words_2019.png)
 
 
 ### Markdown
