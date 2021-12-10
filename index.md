@@ -13,10 +13,14 @@ In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr 
 ### Party distribution in QuoteBank in 2019
 {% include piechart_party_2019.html %}
 
+### Top words in the quotes in 2019
+![Top words in 2019](/assets/wordcloud_2019.png)
+
 ## Time correlation
 
 
 ## Quote similarity
+
 
 
 
