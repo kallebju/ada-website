@@ -1,8 +1,20 @@
-## Welcome to GitHub Pages
+# A study of quote similarity among politicians
 
-You can use the [editor on GitHub](https://github.com/kallebju/ada-website/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction
+In this project we investigate similarity among American politicians in different aspects. First, we perform a time correlation study to find politicians that tend to be quoted at the same time. This could for example suggest that these politicians focus on the same subject. Second, we expand the study by also comparing the actual content of the quotes made by the politicians, and compare the politicians by their quotes that they've made. Here we find interesting clusters of politicians that make similar quotes. Lastly, we study how both the time correlation and quote similarity have varied over the last three years in the QuoteBank dataset for an interesting pair of politicians, namely the former Secretary of State John Kerry and the current President Joe Biden.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## QuoteBank
+Before we begin, let's gain some more insight into the data we use for the project.
+In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr of times.
+
+{% include piechart.html %}
+
+## Time correlation
+
+
+## Quote similarity
+
+
 
 ### Markdown
 
