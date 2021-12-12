@@ -27,6 +27,15 @@ The following figure shows the most heavily weighted words in the most important
 
 ![Top words in clusters](/assets/cluster_words_2019.png)
 
+### Characteristics of the clusters
+To see if the content of the quotes may tell us something about the gender and party of the quoted politician, we decided to plot the distribution of these two speaker properties in the following two figures.
+<h3 style="text-align: center;">Gender distribution in clusters</h3>
+![Gender in clusters](/assets/gender_hist_2019.png)
+Here it is important to mention that the gender distribution of the entire dataset is heavily skewed before the clustering, as 82 % of the politicians are male. However, we can still note that some clusters have a greater share of males than others. One observation is that cluster 13 have a greater share of women compared to many other clusters, and this cluster is heavlily dependent on words relating to education, as can be seen in the word cloud figure above.
+<h3 style="text-align: center;">Party distribution in clusters</h3>
+![Party in clusters](/assets/party_hist_2019.png)
+While the distribution of gender in the dataset was heavily skewed, the distribution of party is much more balanced, where Democratic, Republican and Other make up roughly a third of the quotes each, as can be seen in the pie chart in the Introduction section. Despite of this, the distribution within the clusters vary quite a lot. Cluster 13, which was mentioned above, include a majority of Democratic politicians. This differs from cluster 10 for example, which includes a majority of Republican speakers. This cluster is heavily dependent on words such as "president", "impeachment", "administration" etc.
+
 
 ### Markdown
 
