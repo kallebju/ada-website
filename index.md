@@ -68,6 +68,10 @@ Upon further analysis, the number of politicians in Joe Biden's cluster each yea
 Even so, upon analysis, we find a certain stability in the population of Joe Biden's cluster in recent years.
 
 We noticed that Joe Biden and John Kerry never belong to the same cluster. However, we analyzed the cross-correlation of Joe Biden and Kerry over the years and compared to their auto-correlation as references :
+
 ![Crosscorrelation between Biden and Kerry](/assets/crosscorrelation.png)
 
 The cross-correlation of the two time series shows that they are not very far apart.
+
+## Conclusion
+
