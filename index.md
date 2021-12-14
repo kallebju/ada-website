@@ -33,6 +33,11 @@ Here it is important to mention that the gender distribution of the entire datas
 ![Party in clusters](/assets/party_hist_2019.png)
 While the distribution of gender in the dataset was heavily skewed, the distribution of party is much more balanced, where Democratic, Republican and Other make up roughly a third of the quotes each, as can be seen in the pie chart in the Introduction section. Despite of this, the distribution within the clusters vary quite a lot. Cluster 13, which was mentioned above, include a majority of Democratic politicians. This differs from cluster 10 for example, which includes a majority of Republican speakers. This cluster is heavily dependent on words such as "president", "impeachment", "administration" etc.
 
+### Similarity over years
+Two politicians that were in the same cluster for the 2020 data was John Kerry and Joe Biden. By calculating the quote similarity for these politicians for 2018 until 2020, we see that the similarity has increased.
+
+![Biden Kerry Quote Similarity](/assets/sim_graph.png)
+
 ## Time correlation
 In this part, we focus on quotes as time series indicating the number of weekly quotes by US politicians.
 #### 50 Clusters distribution per year
@@ -72,4 +77,8 @@ We noticed that Joe Biden and John Kerry never belong to the same cluster. Howev
 The cross-correlation of the two time series shows that they are not very far apart.
 
 ## Conclusion
+By comparing politicians by their quote similarity, it's possible to get some interesting insights. The strongest topic are different for all of the 15 clusters, and the most heavily weighted words within those topics seem to tell us somethng about the politicians included in that cluster. As mentioned above, there is one cluster where the most heavily weighted words are relating to education. By further analyzing the composition of the clusters we can get insights about the politicians that are included in the clusters. With the "education"-cluster described above, there is a greater share of women included compared to other clusters, and also a majority of democratic politicians. This suggests that politicians who focus on this topics in their quotes are more probable to be women and democratic, compared to many other focus areas.
 
+Moving on, we extended the study by also measuring the time correlation for the time of quoting. An interesting insight from this is that cluster seems to be pretty stable; we see that Joe Biden ends up in a cluster with the same politicians from 2018 until 2020.
+
+Finally we note that for both of the similarity measures we identify an increasing trend of similarity between Joe Biden and John Kerry from 2018 until 2020. As this trend is identified by two measures, it should indicate that these two politicians have become more similar during these years.
