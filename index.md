@@ -51,6 +51,9 @@ In this part, we focus on quotes as time series indicating the number of weekly 
 
 ![50 Clusters distribution per year](/assets/kshapeperyear.png)
 
+We notice a largely predominant cluster each year, despite the fact that the clusters are better distributed the last 3 years.
+However, the number of politicians in the other clusters is generally still reasonably large enough to allow for further analysis.
+
 ### Characteristics of the clusters
 We begin by analyzing the gender distributions by cluster each year : 
 ![Gender distribution by years and cluster](/assets/gender.png)
