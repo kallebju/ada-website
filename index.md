@@ -1,34 +1,42 @@
 # A study of quote similarity among politicians
 
 ## Introduction
-In this project we investigate similarity among American politicians in different aspects. First, we perform a time correlation study to find politicians that tend to be quoted at the same time. This could for example suggest that these politicians focus on the same subject. Second, we expand the study by also comparing the actual content of the quotes made by the politicians, and compare the politicians by their quotes that they've made. Here we find interesting clusters of politicians that make similar quotes. Lastly, we study how both the time correlation and quote similarity have varied over the last three years in the QuoteBank dataset for an interesting pair of politicians, namely the former Secretary of State John Kerry and the current President Joe Biden.
+In this project we investigate similarity among American politicians in different aspects. First, we perform a study by comparing the actual content of the quotes made by the politicians, and compare the politicians by their quotes that they've made. Here we find interesting clusters of politicians that make similar quotes.
+
+Second, we extend the study by also  a time correlation study to find politicians that tend to be quoted at the same time. This could for example suggest that these politicians focus on the same subject. 
+
+Lastly, we study how both the time correlation and quote similarity have varied over the last three years in the QuoteBank dataset for an interesting pair of politicians, namely the former Secretary of State John Kerry and the current President Joe Biden.
 
 ## QuoteBank
+The main dataset used in this project is QuoteBank, which contains 178 million quotations together with the name of the speaker [1]. The dataset has been collected from news articles in English on the internet, from August 2008 until April 2020. We also use Wikidata for gaining additional information about the quoted individuals.
+
 Before we begin, let's gain some more insight into the data we use for the project.
-In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr of times.
-**Let's see the distribution of gender and party among the politicians in the dataset**
+In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr of times. Below you can find the distribution of gender and party among the politicians in the dataset, and also the most comm
+**Let's investigate the distribution of gender and party among the politicians in the dataset**
 
 ### Gender distribution in QuoteBank in 2019
 {% include piechart.html %}
 ### Party distribution in QuoteBank in 2019
 {% include piechart_party_2019.html %}
-
+<!--
 ### Top words in the quotes in 2019
-![Top words in 2019](/assets/wordcloud_2019.png)
 
+![Top words in 2019](/assets/wordcloud_2019.png)
+-->
 ## Quote similarity
-In this part we cluster the concatenated quotes of single politicians in the 2019 partition of QuoteBank. The bag-of-words representation was reduced in dimensionality using NMF, to 50 dimensions.
+In this part we cluster the concatenated quotes of single politicians in the 2019 partition of QuoteBank. into 14 clusters. The bag-of-words representation was reduced in dimensionality using NMF, to 50 dimensions.
 The following figure shows the most heavily weighted words in the most important dimension for centroids in respective cluster.
 
 <h3 style="text-align: center;">Heavily weighted words in clusters</h3>
 
 ![Top words in clusters](/assets/cluster_words_2019.png)
 
+Interestingly all the cluster centroids have different dimensions as their strongest dimension. Also the strongest words in each dimension seem to be related in many cases, for instance cluster 2 contain words such as "law", "constitutional" and "court", while cluster 8 contain words relating to education, such as "students", "skills" etc.
 ### Characteristics of the clusters
-To see if the content of the quotes may tell us something about the gender and party of the quoted politician, we decided to plot the distribution of these two speaker properties in the following two figures.
+To see if the content of the quotes may tell us something about the gender and party of the quoted politician, we decided to plot the distribution of these two speaker properties among the clusters in the following two figures.
 <h3 style="text-align: center;">Gender distribution in clusters</h3>
 ![Gender in clusters](/assets/gender_hist_2019.png)
-Here it is important to mention that the gender distribution of the entire dataset is heavily skewed before the clustering, as 82 % of the politicians are male. However, we can still note that some clusters have a greater share of males than others. One observation is that cluster 13 have a greater share of women compared to many other clusters, and this cluster is heavlily dependent on words relating to education, as can be seen in the word cloud figure above.
+Here it is important to mention that the gender distribution of the entire dataset is heavily skewed before the clustering, as 82 % of the politicians are male. However, we can still note that some clusters have a greater share of males than others. One observation is that cluster 13 have a greater share of women compared to many other clusters, and this cluster is heavily dependent on words relating to education, as can be seen in the word cloud figure above.
 <h3 style="text-align: center;">Party distribution in clusters</h3>
 ![Party in clusters](/assets/party_hist_2019.png)
 While the distribution of gender in the dataset was heavily skewed, the distribution of party is much more balanced, where Democratic, Republican and Other make up roughly a third of the quotes each, as can be seen in the pie chart in the Introduction section. Despite of this, the distribution within the clusters vary quite a lot. Cluster 13, which was mentioned above, include a majority of Democratic politicians. This differs from cluster 10 for example, which includes a majority of Republican speakers. This cluster is heavily dependent on words such as "president", "impeachment", "administration" etc.
@@ -39,10 +47,12 @@ Two politicians that were in the same cluster for the 2020 data was John Kerry a
 ![Biden Kerry Quote Similarity](/assets/sim_graph.png)
 
 ## Time correlation
-In this part, we focus on quotes as time series indicating the number of weekly quotes by US politicians.
-#### 50 Clusters distribution per year
-![50 Clusters distribution per year](/assets/kshapeperyear.png)
+In this part, we focus on quotes as time series indicating the number of weekly quotes by US politicians. Each politician is hence represented as a time series of the number of quotes for each week of one year. Following this, we apply a clustering algorithm to find groups of politicians that have high correlation among their time series.
 
+**Let's check how many individuals that are assigned to each of the 50 clusters:**
+
+![50 Clusters distribution per year](/assets/kshapeperyear.png)
+<!--
 ### Methods
 We have therefore extracted from the database the different aliases by American politicians in order to search and extract, for a given year, all the dates of the quotations. We thus create annual time series associated to each politician and then clustered it by K-Shape algorithm.
 
@@ -50,17 +60,19 @@ We have therefore extracted from the database the different aliases by American 
 ![Cluster Kshape Curve](/assets/clusterkshapecurve.png)
 
 According to this curve, we should take a number of clusters in the range of 40~50. We have chosen the number of 50 clusters arbitrarily in this range.
+-->
 ### Characteristics of the clusters
 We begin by analyzing the gender distributions by cluster each year : 
 ![Gender distribution by years and cluster](/assets/gender.png)
 
 82% of the politicians in the database are men, this inequality can be found within the clusters, a large part of which is exclusively male.
 
-Then, we analyse the US politican party distributions by cluster each year : 
+Then, we analyse the distribution party among the clusters each year : 
 ![Party distribution by years and cluster](/assets/party.png)
 
 The proportion of Democrats and Republicans in the clusters each year seems to remain stable. However, there has been an increase in the number of party categorized as "other" here
 
+### Case study: Joe Biden and John Kerry
 #### Analysis of recurring politicians in the Joe Biden cluster
 We put the year 2020 as a reference for Joe Biden and we looked to compare politicians belonging to the same cluster as him. The curve represent the number of politicians in Joe Biden's cluster common to his 2020 cluster :
 
@@ -70,7 +82,8 @@ Note that the curve is clearly increasing.
 Upon further analysis, the number of politicians in Joe Biden's cluster each year is actually increasing as well. This explains the shape of the curve.
 Even so, upon analysis, we find a certain stability in the population of Joe Biden's cluster in recent years.
 
-We noticed that Joe Biden and John Kerry never belong to the same cluster. However, we analyzed the cross-correlation of Joe Biden and Kerry over the years and compared to their auto-correlation as references :
+#### Similarity over years
+We noticed that Joe Biden and John Kerry never belong to the same cluster. However, we analyzed the cross-correlation of Joe Biden and Kerry over the years and compared to their auto-correlation as references. This tells us how the similarity has evolved over the years.
 
 ![Crosscorrelation between Biden and Kerry](/assets/crosscorrelation.png)
 
@@ -82,3 +95,11 @@ By comparing politicians by their quote similarity, it's possible to get some in
 Moving on, we extended the study by also measuring the time correlation for the time of quoting. An interesting insight from this is that cluster seems to be pretty stable; we see that Joe Biden ends up in a cluster with the same politicians from 2018 until 2020.
 
 Finally we note that for both of the similarity measures we identify an increasing trend of similarity between Joe Biden and John Kerry from 2018 until 2020. As this trend is identified by two measures, it should indicate that these two politicians have become more similar during these years.
+
+## References
+[1] T. Vaucher, A. Spitz, M. Catasta, and R. West, “Quotebank: A
+corpus of quotations from a decade of news,” in Proceedings
+of the 14th ACM International Conference on Web Search
+and Data Mining, ser. WSDM ’21. New York, NY, USA:
+Association for Computing Machinery, 2021, p. 328–336.
+[Online]. Available: https://doi.org/10.1145/3437963.3441760
