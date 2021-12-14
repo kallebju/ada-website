@@ -81,7 +81,7 @@ We noticed that Joe Biden and John Kerry never belong to the same cluster. Howev
 The cross-correlation of the two time series shows that they are not very far apart.
 
 ## Conclusion
-By comparing politicians by their quote similarity, it's possible to get some interesting insights. The strongest topics are different for all of the 15 clusters, and the most heavily weighted words within those topics seem to tell us something about the politicians included in that cluster. As mentioned above, there is one cluster where the most heavily weighted words are relating to education. By further analyzing the composition of the clusters we can get insights about the politicians that are included in the clusters. Within the previously described "education"-cluster, there is a greater share of women compared to other clusters, and also a majority of Democratic politicians. This suggests that politicians who focus on these topics in their quotes are more probable to be women and Democratic, compared to many other focus areas.
+By comparing politicians by their quote similarity, it's possible to get some interesting insights. The strongest topics are different for all of the 14 clusters, and the most heavily weighted words within those topics seem to tell us something about the politicians included in that cluster. As mentioned above, there is one cluster where the most heavily weighted words are relating to education. By further analyzing the composition of the clusters we can get insights about the politicians that are included in the clusters. Within the previously described "education"-cluster, there is a greater share of women compared to other clusters, and also a majority of Democratic politicians. This suggests that politicians who focus on these topics in their quotes are more probable to be women and Democratic, compared to many other focus areas.
 
 Moving on, we extended the study by also measuring the time correlation for the time of quoting. An interesting insight from this is that cluster seems to be pretty stable; we see that Joe Biden ends up in a cluster with the same politicians from 2018 until 2020.
 
@@ -94,3 +94,5 @@ of the 14th ACM International Conference on Web Search
 and Data Mining, ser. WSDM ’21. New York, NY, USA:
 Association for Computing Machinery, 2021, p. 328–336.
 [Online]. Available: https://doi.org/10.1145/3437963.3441760
+
+This project was created by Kalle Bjurek, Lucas Braz, Pierre-Alain Durand and Clément Nicolle
