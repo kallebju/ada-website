@@ -39,11 +39,8 @@ In this part, we focus on quotes as time series indicating the number of weekly 
 ![50 Clusters distribution per year](/assets/kshapeperyear.png)
 
 ### Methods
-We have therefore extracted from the database the different aliases by American politicians in order to search and extract, for a given year, all the dates of the quotations. We thus create annual time series associated to each politician.
-#### K-Shape
-In order to cluster all these time series, we quickly noticed that the use of K-means was inadequate. The algorithm systematically put the vast majority of time series in a single cluster.
-We then looked at a clustering method adapted to time series, based on the concept of cross-correlation between signals: K-Shape.
-The cross-correlation is itself based on a convolution between signals and allows to analyze the similarity between time signals ( as a distance), despite a temporal shift between them.
+We have therefore extracted from the database the different aliases by American politicians in order to search and extract, for a given year, all the dates of the quotations. We thus create annual time series associated to each politician and then clustered it by K-Shape algorithm.
+
 #### Choice of the number of cluster
 ![Cluster Kshape Curve](/assets/clusterkshapecurve.png)
 
@@ -60,10 +57,11 @@ Then, we analyse the US politican party distributions by cluster each year :
 The proportion of Democrats and Republicans in the clusters each year seems to remain stable. However, there has been an increase in the number of party categorized as "other" here
 
 #### Analysis of recurring politicians in the Joe Biden cluster
-We put the year 2020 as a reference for Joe Biden and we looked to compare politicians belonging to the same cluster as him :
+We put the year 2020 as a reference for Joe Biden and we looked to compare politicians belonging to the same cluster as him. The curve represent the number of politicians in Joe Biden's cluster common to his 2020 cluster :
+
 ![Number of recurrent politicians with Biden](/assets/number_of_recurrent_politicians_with_Biden.png)
 
-Note that the curve representing the number of politicians in Joe Biden's cluster common to his 2020 cluster is clearly increasing.
+Note that the curve is clearly increasing.
 Upon further analysis, the number of politicians in Joe Biden's cluster each year is actually increasing as well. This explains the shape of the curve.
 Even so, upon analysis, we find a certain stability in the population of Joe Biden's cluster in recent years.
 
