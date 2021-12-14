@@ -11,8 +11,7 @@ Lastly, we study how both the time correlation and quote similarity have varied 
 The main dataset used in this project is QuoteBank, which contains 178 million quotations together with the name of the speaker [1]. The dataset has been collected from news articles in English on the internet, from August 2008 until April 2020. We also use Wikidata for gaining additional information about the quoted individuals.
 
 Before we begin, let's gain some more insight into the data we use for the project.
-In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr of times. Below you can find the distribution of gender and party among the politicians in the dataset, and also the most comm
-**Let's investigate the distribution of gender and party among the politicians in the dataset**
+In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr of times. Below you can find the distribution of gender and party among the politicians in the dataset.
 
 ### Gender distribution in QuoteBank in 2019
 {% include piechart.html %}
