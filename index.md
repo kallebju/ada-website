@@ -46,48 +46,28 @@ We then looked at a clustering method adapted to time series, based on the conce
 The cross-correlation is itself based on a convolution between signals and allows to analyze the similarity between time signals ( as a distance), despite a temporal shift between them.
 #### Choice of the number of cluster
 ![Cluster Kshape Curve](/assets/clusterkshapecurve.png)
+
 According to this curve, we should take a number of clusters in the range of 40~50. We have chosen the number of 50 clusters arbitrarily in this range.
 ### Characteristics of the clusters
+We begin by analyzing the gender distributions by cluster each year : 
 ![Gender distribution by years and cluster](/assets/gender.png)
+
+82% of the politicians in the database are men, this inequality can be found within the clusters, a large part of which is exclusively male.
+
+Then, we analyse the US politican party distributions by cluster each year : 
 ![Party distribution by years and cluster](/assets/party.png)
+
+The proportion of Democrats and Republicans in the clusters each year seems to remain stable. However, there has been an increase in the number of party categorized as "other" here
+
+#### Analysis of recurring politicians in the Joe Biden cluster
+We put the year 2020 as a reference for Joe Biden and we looked to compare politicians belonging to the same cluster as him :
 ![Number of recurrent politicians with Biden](/assets/number_of_recurrent_politicians_with_Biden.png)
+
+Note that the curve representing the number of politicians in Joe Biden's cluster common to his 2020 cluster is clearly increasing.
+Upon further analysis, the number of politicians in Joe Biden's cluster each year is actually increasing as well. This explains the shape of the curve.
+Even so, upon analysis, we find a certain stability in the population of Joe Biden's cluster in recent years.
+
+We noticed that Joe Biden and John Kerry never belong to the same cluster. However, we analyzed the cross-correlation of Joe Biden and Kerry over the years and compared to their auto-correlation as references :
 ![Crosscorrelation between Biden and Kerry](/assets/crosscorrelation.png)
 
-We can see that a very large number of clusters are male because 82% of the politicians in the database are male. But it is interesting to note that some clusters are composed only of women
-#### Analyses des politiciens récurent dans le cluster de Joe Biden
-TODO : courbe par an, reference derniere année
-We put the year 2020 as a reference for Joe Biden and we looked to compare politicians belonging to the same cluster as Joe Biden. We clearly see that in some years we have a strong similarity of clusters.
-TODO John Kerry et Joe Biden (jamais ensembles mais distance faible)
-We notice that Joe Biden and John Kerry never belong to the same cluster. Nevertheless, the cross-correlation of the two time series shows that they are not very far apart.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kallebju/ada-website/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+The cross-correlation of the two time series shows that they are not very far apart.
