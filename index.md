@@ -20,13 +20,13 @@ In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr 
 
 ## Quote similarity
 In this part we cluster the concatenated quotes of single politicians in the 2019 partition of QuoteBank, into 14 clusters. The bag-of-words representation was reduced in dimensionality using NMF, to 50 dimensions.
-The following figure shows the most heavily weighted words in the most important dimension for centroids in respective cluster.
+The following figure shows the most heavily weighted words in the most important dimension for a sampled politician in respective cluster.
 
 <h3 style="text-align: center;">Heavily weighted words in clusters</h3>
 
 ![Top words in clusters](/assets/cluster_words_2019.png)
 
-Interestingly all the cluster centroids have different dimensions as their strongest dimension. Also the strongest words in each dimension seem to be related in many cases, for instance cluster 2 contain words such as "law", "constitutional" and "court", while cluster 8 contain words relating to education, such as "students", "skills" etc.
+Interestingly, for each cluster, the sampled politician have different dimensions as their strongest dimension. Also the strongest words in each dimension seem to be related in many cases, for instance cluster 2 contain words such as "law", "constitutional" and "court", while cluster 8 contain words relating to education, such as "students", "skills" etc.
 ### Characteristics of the clusters
 To see if the content of the quotes may tell us something about the gender and party of the quoted politician, we decided to plot the distribution of these two speaker properties among the clusters in the following two figures.
 <h3 style="text-align: center;">Gender distribution in clusters</h3>
