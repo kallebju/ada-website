@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
 description: This project is a part of the Applied Data Analysis course @ EPFL
+github:
+  is_project_page: false
