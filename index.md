@@ -15,9 +15,10 @@ In 2019, 3005 US policians were quoted. In total these were quoted 1'306'702 nr 
 
 ### Gender distribution in QuoteBank in 2019
 {% include piechart.html %}
+The dataset is indeed heavily skewed towards the male gender.
 ### Party distribution in QuoteBank in 2019
 {% include piechart_party_2019.html %}
-
+For the party memberships on the other hand, the distribution is much more equally distributed.
 ## Quote similarity
 In this part we cluster the concatenated quotes of single politicians in the 2019 partition of QuoteBank, into 14 clusters. The bag-of-words representation was reduced in dimensionality using NMF, to 50 dimensions.
 The following figure shows the most heavily weighted words in the most important dimension for a sampled politician in respective cluster.
@@ -85,7 +86,7 @@ The cross-correlation of the two time series shows that they are not very far ap
 ## Conclusion
 By comparing politicians by their quote similarity, it's possible to get some interesting insights. The strongest topics are different for all of the 14 clusters, and the most heavily weighted words within those topics seem to tell us something about the politicians included in that cluster. As mentioned above, there is one cluster where the most heavily weighted words are relating to education. By further analyzing the composition of the clusters we can get insights about the politicians that are included in the clusters. Within the previously described "education"-cluster, there is a greater share of women compared to other clusters, and also a majority of Democratic politicians. This suggests that politicians who focus on these topics in their quotes are more probable to be women and Democratic, compared to many other focus areas.
 
-Moving on, we extended the study by also measuring the time correlation for the time of quoting. An interesting insight from this is that cluster seems to be pretty stable; we see that Joe Biden ends up in a cluster with the same politicians from 2018 until 2020.
+Moving on, we extended the study by also measuring the time correlation for the time of quoting. An interesting insight from this is that clusters seems to be pretty stable; in 2020 we see that Joe Biden ends up in a cluster where ~85 of his cluster neighbours have been in his cluster since 2018. This is a big share of the total politicians in Bidens cluster in 2020, which included about 200 politicians.
 
 Finally, we note that for both of the similarity measures we identify an increasing trend of similarity between Joe Biden and John Kerry from 2018 until 2020. As this trend is identified by two measures, it should indicate that these two politicians have become more similar during these years.
 
