@@ -3,7 +3,7 @@
 ## Introduction
 In this project, we investigate similarities among American politicians in different aspects. First, we perform a study by comparing the actual content of the quotes made by the politicians, and compare the politicians by the quotes that they've made. Here we find interesting clusters of politicians that make similar quotes.
 
-Second, we extend the study by also a time correlation study to find politicians that tend to be quoted at the same time. This could for example suggest that these politicians focus on the same subject. 
+Second, we extend the study with a time correlation study to find politicians that tend to be quoted at the same time. This could for example suggest that these politicians focus on the same subject. 
 
 Lastly, we study how both the time correlation and quote similarity have varied over the last three years in the QuoteBank dataset for an interesting pair of politicians, namely the former Secretary of State John Kerry and the current President Joe Biden.
 
